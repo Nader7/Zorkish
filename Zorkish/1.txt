@@ -1,0 +1,30 @@
+W|Mountain World|A valley surrounded by foggy mountains
+P|player, me|I,C-12-4
+
+#items
+#IF AN ITEM CONTAINS ANOTHER ITEM IT MUST BE LOADED AFTER THE ITEM WHICH IT CONTAINS
+#type|id|names|description|location description|weight|components|
+I|0|radio|Small portable Radio that emits static|On the side of the road lies a small red radio covered in dirt and a ruined notepad|2||
+I|1|flashlight|Burns away the darkness|On the ground to your left is a flash light with a small crack in the plastic|2||
+I|2|pendant|A simple pendant|Within the ash of the fire pit lies a simple pendant, undamaged by the fire|1||
+I|3|notepad|A notepad beyond repair|I cant understand these symbols|0||
+I|4|backpack,bag|A bag that can be used to hold items|next to a long abandoned camp site lies this backpack|0|I-3|
+
+
+#ENTITIES
+#type|ids|names|look|components
+E|0|monster,enemy|a distorted shadow, taking the shape of a horribly disfigured human|I-2,C-4-4
+E|1|door|a solid wooden door|O-0
+
+#ITEMS MUST BE ADDED BEFORE LOCATIONS
+
+#locations
+#type|id|names|Title|short description|look|connections|Items|Entities
+L|0|valley,edge of the valley|Edge of the valley||a long desolate field of dying grass. Behind you lies a mountain's edge with a winding path, twisting upward through an endless forest|1|||
+L|1|winding path,path|On the path||a chaotic dirt road surrounded by trees. Ahead, a thick fog thwarts your view. The forest is silent.|2|0,4||
+L|2|ahead,fog|Fog|Engulfed by fog|nothing. You hear the crackling of a dying fire to your right, accompanied by a strange smell. The road seems to continue further forward|3,4||
+L|3|dying fire,fire,smell,right|Fading fire|A small camp-site lies abandoned. The fog is beginning to fade|a glowing log lying within a small pit. The pit is filled with a surprising amount of ash. Something was incinerated here. You find a set of chaotic, winding tracks.|6|2||
+L|4|forward,ahead|Lost|You've lost the road, but thankfully also the fog. Standing along a cliffs edge|what appears to be a lone cabin, a short climb down toward your right.|5|||
+L|5|right,down|Cabin|The cliff was steeper than you initially thought, you cannot climb back up. Night begins to fall.|the cabin just NORTH of you.|7|1|1|
+L|6|tracks|The road|Somehow you've found the road.|the ground, coated in ash. The trees slowly die as you look further NORTH toward the remnants of a forest fire.|||0|
+L|7|cabin|In The Cabin|As you walk through the cabin you see that it has been long abandoned|a table||||
